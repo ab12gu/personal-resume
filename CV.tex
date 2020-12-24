@@ -1,0 +1,479 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SIMPLE-RESUME-CV
+%% <https://github.com/zachscrivena/simple-resume-cv>
+%% This is free and unencumbered software released into the
+%% public domain; see <http://unlicense.org> for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INSTRUCTIONS FOR COMPILING THIS DOCUMENT ("CV.tex")
+%% TeX ---(XeLaTeX)---> PDF:
+%%
+%% Method 1: Use latexmk for fully automated document generation:
+%%   latexmk -xelatex "CV.tex"
+%%   (add the -pvc switch to automatically recompile on changes)
+%%
+%% Method 2: Use XeLaTeX directly:
+%%   xelatex "CV.tex"
+%%   (run multiple times to resolve cross-references if needed)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[a4paper,10pt,oneside]{article}
+\documentclass[letterpaper,10pt,oneside]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TYPESETTING OPTIONS.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\TypesetInNonStopMode}{1}
+\newcommand{\TypesetInDraftMode}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{CV-Preamble.tex}
+
+% CV Info (to be customized).
+\newcommand{\CVAuthor}{Abhay Gupta}
+\newcommand{\CVTitle}{Mechanical Engineering Student}
+\newcommand{\CVNote}{CV compiled on {\today}}
+\newcommand{\CVWebpage}{http://linkedin.com/in/abgup}
+\newcommand{\CVWeb}{abgup.com}
+\newcommand{\CVWebg}{http://abgup.com}
+\definecolor{dblue}{rgb}{.5,.6,.8} %Horizontal Line Color
+\definecolor{cblue}{rgb}{0.1,0.2,0.6}
+
+% PDF settings and properties.
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={\CVAuthor},
+pdfsubject={\CVWebpage},
+pdfcreator={XeLaTeX},
+pdfproducer={},
+pdfkeywords={},
+pdfpagemode={},
+bookmarks=true,
+unicode=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}
+\usepackage{multicol} %Multiple Columns
+
+% Shorthand.
+\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%\renewcommand{\familydefault}{\mgdefault}
+
+%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%
+{
+\fontsize{35}{60}
+\textbf{       Abhay Gupta}
+}
+
+\begin{subtitle}
+\vspace{-11ex}
+{{ab18gu@gmail.com}}
+\,\SubBulletSymbol\,
+\href{\CVWebpage}
+{\CVWebpage}
+\,\SubBulletSymbol\,
+\,(916)\,792-7682
+\par{Current: \color{cblue} Folsom, CA 95630}
+\par{Portfolio: \color{cblue} \href{\CVWebg}{\CVWeb}{}}
+\par{U.S. Citizen}
+}
+\end{subtitle}
+
+\vspace{-3ex}
+{\hspace{0.1in}\noindent\color{dblue}\rule{7.1in}{0.4pt}}
+
+\vspace{-3ex}
+{\hspace{0.1in}\noindent\color{dblue}\rule{7.1in}{0.4pt}}
+
+
+\begin{body}
+
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\vspace{2ex}
+
+%Section Title
+{\color{cblue}
+{EDUCATION} %Horizontal Line
+}
+
+%Horizontal Line
+\vspace{-3.5ex}
+\hspace{-1.25in}\noindent\color{dblue}\rule{6.935in}{0.4pt} 
+\vspace{-5.5ex}
+
+\section
+{\textbf{University of Washington}}{}
+
+{\small M.S. Mechanical Engineering}
+\BulletItem
+{\small Thesis: Graphical modeling of Optical Tweezers \& Regression Models || 3.6}
+
+\begin{subtitle}
+\vspace{-8ex}
+{{Sep 2018 - Dec 2019}}
+\end{subtitle}
+
+\vspace{-1ex}
+
+%%%%%%%%%%%%
+
+\section
+{\textbf{Santa Clara University}}{}{}
+
+{{\small M.S. Computer Engineering (18 units completed)}}
+\begin{detail}
+\BulletItem
+Transferred to University of Washington || 3.8
+\end{detail}
+
+\begin{subtitle}
+\vspace{-8ex}
+{{Sep 2017 - Jun 2018}}
+\end{subtitle}
+\vspace{1ex}
+    
+
+{{\small B.S. Mechanical Engineering}}
+\begin{detail}
+\BulletItem
+Entrepreneurship minor || Graduated in 3 years with honors || 3.6
+\end{detail}
+
+\begin{subtitle}
+\vspace{-8ex}
+{{Sep 2014 - Sep 2017}}
+\end{subtitle}
+\vspace{3ex}
+
+
+%%%%%%%%%%%%
+%% SKILLS %%
+%%%%%%%%%%%%
+
+{
+\hspace{-1.72in}\noindent\color{cblue}
+{SKILLS} %Horizontal Line
+}
+
+\vspace{-1ex}
+{\hspace{-1.73in}\noindent\color{dblue}\rule{6.935in}{0.4pt}} %Horizontal Line
+\vspace{-5.5ex}
+
+\section
+{Software:}{}
+
+\vspace{-2.5ex}
+\begin{detail}
+Programming: ML, Python, C/C++, ROS, Matlab, OpenGL, Git, Maple, LabVIEW, Simulink, \LaTeX
+\end{detail}
+
+\begin{detail}
+Design/Analysis: Ansys CFX, Star CCM+, SolidWorks, Abaqus, Autodesk Inventor
+\end{detail}
+\vspace{0.5ex}
+
+\vspace{-1.5ex}
+\section
+{Hardware:}{}
+
+\vspace{-2.5ex}
+\begin{detail}
+Mechanical: Lathe, Mill, Laser Cutting, 3D Printing
+\end{detail}
+
+\begin{detail}
+Electrical: Oscilloscopes, Function Generators, DC/AC Power Supplies, Soldering
+\end{detail}
+\vspace{0.5ex}
+
+\vspace{-2.5ex}
+\section
+{Certifications:}{}
+
+\vspace{-2.0ex}
+\begin{detail}
+Engineer-In-Training, State of CA [05/18]  
+\newline
+Solidworks CSWA [03/15]
+\end{detail}
+
+\vspace{3ex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% RELEVANT EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{
+\hspace{-1.72in}\noindent\color{cblue}
+{INDUSTRY EXPERIENCE} %Horizontal Line
+}
+
+\vspace{-1ex}
+{\hspace{-1.73in}\noindent\color{dblue}\rule{6.935in}{0.4pt}} %Horizontal Line 
+\vspace{-5ex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section
+{\textbf{Microvision}
+\newline
+System Modelling Intern
+\newline}
+
+
+\vspace{-2.5ex}
+\begin{detail}
+\BulletItem
+Modeled the response of Lidar activated SiPM (Silicon photomultipliers) 
+\newline
+through Simulink
+
+\begin{subtitle}
+\vspace{-7.8ex}
+{{Sep 2019 - Aug 2019}} 
+\end{subtitle}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section
+{\textbf{CSAA Insurance}
+\newline
+Physics Consultant 
+\newline}
+
+
+\vspace{-2.5ex}
+\begin{detail}
+\BulletItem
+Evaluated novel engineering and physics aspects for patent applications
+
+\BulletItem
+Researched alternative approaches for products and methods
+\end{detail}
+
+\begin{subtitle}
+\vspace{-7.8ex}
+{{Sep 2018 - Dec 2018}} 
+\end{subtitle}
+
+\begin{subtitle}
+\vspace{-2.0ex}
+{{(Part-time)}} 
+\end{subtitle}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section
+{\textbf{TheraNova}
+\newline
+R\&D Engineering Intern
+}
+
+\BulletItem
+\vspace{-2.5ex}
+\begin{detail}
+
+\BulletItem
+ Developed a python software analysis system to understand gait measurements
+\BulletItem
+ Ensured the software analysis is accurate for 80+ patients
+\end{detail}
+
+\begin{subtitle}
+\vspace{-7.8ex}
+{{Jun 2018 - Sep 2018}}
+\end{subtitle}
+\vspace{0ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section
+{\textbf{Valeo}
+\newline
+Systems Engineering Intern}
+
+\BulletItem
+\vspace{-2.5ex}
+\begin{detail}
+\BulletItem
+ Produced hardware and software demos for automotive OEMs
+\BulletItem
+ Collaborated with start-ups and OEMs to develop new cabin safety features
+\end{detail}
+
+\begin{subtitle}
+\vspace{-7.8ex}
+{{Apr 2018 - Jun 2018}}
+\end{subtitle}
+\vspace{0ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section
+{\textbf{Pentair}
+\newline
+R\&D Engineering Intern}
+
+\BulletItem
+\vspace{-2.5ex}
+\begin{detail}
+
+\BulletItem
+ Optimized performance of steady state and transient phases of circuit breakers
+\BulletItem
+ Laboratory tested and simulated rail heating to melt snow through Ansys CFX 
+\end{detail}
+
+\begin{subtitle}
+\vspace{-7.8ex}
+{{Sep 2017 - Mar 2018}}
+\end{subtitle}
+\vspace{0ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{\textbf{Accel Biotech}
+\newline
+Mechanical Engineering Intern}
+
+\BulletItem
+\vspace{-2.5ex}
+\begin{detail}
+\BulletItem
+Prototyped medical device components and test assemblies
+\BulletItem
+Supported mechanical, electrical, and software design of a blood diagnostic device
+\end{detail}
+
+\begin{subtitle}
+\vspace{-7.8ex}
+{{Jun 2016 - Sep 2016}}
+\end{subtitle}
+\vspace{0ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{\textbf{Caltrans}
+\newline
+Engineering Intern
+\newline
+}
+
+\BulletItem
+\vspace{-2.5ex}
+\begin{detail}
+\BulletItem
+Reviewed and advised on structural testing for next generation locomotives
+\BulletItem
+Designed a floor plan using Microsoft Visio \& participated in vendor meetings
+\end{detail}
+
+\begin{subtitle}
+\vspace{-7.8ex}
+{{Jul 2015 - Sep 2015}}
+\end{subtitle}
+\vspace{5ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Publications and Patents %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+\hspace{-1.72in}\noindent\color{cblue}
+{PUBLICATIONS \& PATENTS} %Horizontal Line
+}
+
+
+\vspace{-1ex}
+{\hspace{-1.73in}\noindent\color{dblue}\rule{6.935in}{0.4pt}} %Horizontal Line 
+\vspace{-2ex}
+
+{\hspace{-1.76in}\fontsize{9}{1}
+\textbf{Automobile Damage Detection using Thermal Conductivity}}
+
+{\hspace{-1.76in}\fontsize{9}{1}
+{J. Schow, and A. Gupta (Patent Pending)}
+}
+
+\vspace{1ex}
+
+{\hspace{-1.76in}\fontsize{9}{1}
+\textbf{A Cellular Automaton for Modeling Non-Trivial Biomembrane Ruptures}
+}
+
+{\hspace{-1.76in}\fontsize{9}{1} 
+{A Gupta, G. Reint, I. Gozen, and M. Taylor (Published in \textit{Soft Matter})}}
+\vspace{4ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PROFESSIONAL AFFILIATIONS & ACTIVITIES %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{
+\hspace{-1.72in}\noindent\color{cblue}
+{PROFESSIONAL AFFILIATIONS \& ACTIVITIES} %Horizontal Line
+}
+
+\vspace{-1ex}
+{\hspace{-1.73in}\noindent\color{dblue}\rule{6.935in}{0.4pt}} %Horizontal Line 
+\vspace{-2ex}
+
+{\hspace{-1.73in}\small
+\textbf{Numerical Analysis Research Club}, (NARC). Graduate Student Member }
+\vspace{1ex}
+
+{\hspace{-1.73in}\small
+\textbf{American Society of Mechanical Engineers}, (ASME). Student Chapter President}
+\vspace{1ex}
+
+\begin{subtitle}
+\vspace{-34ex}
+{{Dec 2018}}
+
+\vspace{4ex}
+{{Sep 2018}}
+
+\vspace{14ex}
+{{Sep 2018 - Dec 2019}}
+
+\vspace{1.5ex}
+{{Sep 2014 - Jun 2017}}
+
+\end{subtitle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{body}
+
+%%%%%%%%%%%
+% CV NOTE %
+%%%%%%%%%%%
+
+
+
+\end{document}
