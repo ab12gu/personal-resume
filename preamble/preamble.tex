@@ -32,78 +32,6 @@ nohead]{geometry}
 % \definecolor{MyDarkBlue}{RGB}{0,90,160}
 % {\color{MyDarkBlue}This text is dark blue}
 
-% Current date and time.
-\usepackage[yyyymmdd,24hr]{datetime}
-\renewcommand{\dateseparator}{-}
-\settimeformat{xxivtime}
-% {\today}~{\currenttime}
-
-% Timestamp.
-\newcommand{\Timestamp}{{\yyyymmdddate\today}~{\currenttime}}
-
-% Abbreviations for months.
-\newcommand{\LongMonth}[1]{%
-\ifcase#1\relax
-\or January%
-\or February%
-\or March%
-\or April%
-\or May%
-\or June%
-\or July%
-\or August%
-\or September%
-\or October%
-\or November%
-\or December%
-\fi}
-\newcommand{\ShortMonth}[1]{%
-\ifcase#1\relax
-\or Jan%
-\or Feb%
-\or Mar%
-\or Apr%
-\or May%
-\or Jun%
-\or Jul%
-\or Aug%
-\or Sep%
-\or Oct%
-\or Nov%
-\or Dec%
-\fi}
-
-% Select datestamp format.
-\def\DatestampFormatSelection{2}
-
-% Datestamp format: {yyyy}{MM}{dd} ---> yyyy-MM-dd (e.g., 2010-12-31).
-\ifnum\DatestampFormatSelection=1
-\newcommand{\DatestampYMD}[3]{\mbox{#1-#2-#3}}
-\newcommand{\DatestampYM}[2]{\mbox{#1-#2}}
-\newcommand{\DatestampY}[1]{#1}
-\fi
-
-% Datestamp format: {yyyy}{MM}{dd} ---> MMM yyyy (e.g., Dec 2010).
-\ifnum\DatestampFormatSelection=2
-\newcommand{\DatestampYMD}[3]{\mbox{\ShortMonth{#2} #1}}
-\newcommand{\DatestampYM}[2]{\mbox{\ShortMonth{#2} #1}}
-\newcommand{\DatestampY}[1]{#1}
-\fi
-
-% Datestamp format: {yyyy}{MM}{dd} ---> MMMM yyyy (e.g., December 2010).
-\ifnum\DatestampFormatSelection=3
-\newcommand{\DatestampYMD}[3]{\mbox{\LongMonth{#2} #1}}
-\newcommand{\DatestampYM}[2]{\mbox{\LongMonth{#2} #1}}
-\newcommand{\DatestampY}[1]{#1}
-\fi
-
-% Datestamp format: {yyyy}{MM}{dd} ---> yyyy (e.g., 2010).
-\ifnum\DatestampFormatSelection=4
-\newcommand{\DatestampYMD}[3]{#1}
-\newcommand{\DatestampYM}[2]{#1}
-\newcommand{\DatestampY}[1]{#1}
-\fi
-
 % XeLaTeX packages.
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX}
@@ -209,9 +137,8 @@ BoldItalicFont=FreeSerifBoldItalic]
 {\par\end{longtable}\par}
 
 % Macro: section (new section for Education, Research Experience, etc.).
-\renewcommand{\section}[3]{\\[-1em]\\%
-{\UseSectionFont\raggedright{#1}}%
-&}
+\renewcommand{\section}[3]{\\[-1em]
+{\UseSectionFont\raggedright{#1}}&}
 
 
 % Macro: subsection.
