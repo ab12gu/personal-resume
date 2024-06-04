@@ -1,0 +1,57 @@
+% citation: https://tex.stackexchange.com/questions/396648/simple-column-non-working-in-reportclass
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hfill\begin{minipage}{\dimexpr\textwidth-2ex}
+
+\vspace{2ex}
+{\noindent\color{cblue} SKILLS }
+
+%% horizontal line
+\vspace{-1.5ex}
+{\hspace{0ex}\noindent\color{dblue}\rule{6.935in}{0.4pt}} %Horizontal Line 
+\vspace{-2.4ex}
+
+
+
+\begin{multicols}{4}% 2 => 2 columns, justified
+    {\color{cblue} Languages}
+    \begin{itemize}[topsep=3pt,label=\textcolor{blue}{\textbullet}]
+        \itemsep-0.2em 
+        \item Python
+        \item C\#
+        \item Javascript
+        \item C++
+        \item LaTeX
+        \item Matlab
+    \end{itemize}
+    \columnbreak
+    {\color{cblue} Frameworks}
+    \begin{itemize}[topsep=3pt,label=\textcolor{blue}{\textbullet}]
+        \itemsep-0.2em 
+        \item WinForms \& WPF
+        \item Flask \& Jekyll
+        \item Cordova
+        \item JQuery
+        \item  
+        \item  
+    \end{itemize}
+    \columnbreak
+    {\color{cblue} Tools}
+    \begin{itemize}[topsep=3pt,label=\textcolor{blue}{\textbullet}]
+        \itemsep-0.2em 
+        \item Git
+        \item Cmake
+        \item Docker
+        \item 
+        \item 
+        \item 
+    \end{itemize}
+    \columnbreak
+
+\end{multicols}
+
+
+\end{minipage}

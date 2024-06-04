@@ -10,6 +10,8 @@
 %% desc: personal resume in LaTeX
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% \documentclass{beamer}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% COMPILING INSTRUCTIONS                                       
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -17,7 +19,7 @@
 \input{preamble/instructions.tex}
 
 % \documentclass[a4paper,10pt,oneside]{article}
-\documentclass[letterpaper,10pt,oneside]{article}
+\documentclass[beamer, letterpaper,10pt,oneside]{article}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% TYPESETTING OPTIONS.
@@ -34,6 +36,8 @@
 \input{preamble/hyperlinks.tex}
 \input{preamble/colors.tex}
 \input{preamble/pdfsettings.tex}
+
+\usepackage{enumitem,xcolor}
 
 \usepackage{multicol} %Multiple Columns
 
@@ -55,10 +59,15 @@
     \input{main/title.tex}
 
     %%%%%%%%%%%%%%%%%%%%%%%%%
-    %% RELEVANT EXPERIENCE %%
+    %% OBJECTIVE %%
     %%%%%%%%%%%%%%%%%%%%%%%%%
 
     \input{main/objective.tex}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%
+    %% SKILLS %%
+    %%%%%%%%%%%%%%%%%%%%%%%%%
+    \input{main/skills.tex}
 
 
 
