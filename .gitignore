@@ -1,4 +1,6 @@
 build/
-#*.log
-#*.aux
+*.log
+*.aux
+*.fls
+*.fdb_latexmk
 #*.pdf
