@@ -4,3 +4,5 @@ build/
 *.fls
 *.fdb_latexmk
 #*.pdf
+*.out
+*.synctex.gz
