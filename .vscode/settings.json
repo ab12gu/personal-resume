@@ -1,5 +1,5 @@
 {
     "latex-workshop.latex.outDir": "%DIR%/build",
     "latex-workshop.latex.auxDir": "%OUTDIR%/aux",
-    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
 }
