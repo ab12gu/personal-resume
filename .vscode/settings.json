@@ -2,4 +2,31 @@
     "latex-workshop.latex.outDir": "%DIR%/build",
     "latex-workshop.latex.auxDir": "%OUTDIR%/aux",
     "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "lualatexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-lualatex",
+                "-outdir=%OUTDIR%",
+                "-auxdir=%AUXDIR%",
+                "%DOC%"
+            ],
+            "env": {
+                "TEXINPUTS": ".:texmf:" 
+            }
+        },
+
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (lualatex)",
+            "tools": [
+                "lualatexmk"
+            ]
+        },
+    ],
 }
