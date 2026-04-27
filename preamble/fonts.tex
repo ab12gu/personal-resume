@@ -1,0 +1,19 @@
+%% Font settings.
+% Needed to update Tex Live from 2025 to 2026
+% $ wget http://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.sh
+% $ sudo sh update-tlmgr-latest.sh 
+% $ sudo tlmgr install tinos
+
+\usepackage{fontspec}
+% \setmainfont{Arial}
+% \setmainfont{Inter}
+% \setmainfont{Tinos}
+% \setmainfont{Georgia}
+
+% \setmainfont{Open Sans}
+\setmainfont
+[Path=./fonts/Source_Sans_3/static/]
+{SourceSans3-Regular.ttf}[
+BoldFont =  SourceSans3-Bold.ttf,
+ItalicFont = SourceSans3-Italic.ttf ,
+BoldItalicFont = SourceSans3-BoldItalic.ttf ]

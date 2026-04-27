@@ -1,6 +1,9 @@
 
 \documentclass[letterpaper, 10pt]{article}
 
+\input{preamble/fonts.tex}
+\input{preamble/colors.tex}
+
 % Geometry package for page margins.
 \usepackage[
 left=0.70in,
@@ -9,35 +12,15 @@ top=0.7in,
 bottom=0.40in,
 nohead]{geometry}
 
-% \usepackage{tagpdf}
-\usepackage{color}
-\definecolor{myblue}{cmyk}{0.70,0.44,0.88,0}
-\definecolor{hyperlinks}{cmyk}{0.96,0.29,0,0.29}
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=hyperlinks,
-    }
 \usepackage{amssymb}
 
-%% Font settings.
-% Needed to update Tex Live from 2025 to 2026
-% $ wget http://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.sh
-% $ sudo sh update-tlmgr-latest.sh 
-% $ sudo tlmgr install tinos
 
-\usepackage{fontspec}
-% \setmainfont{Arial}
-% \setmainfont{Inter}
-% \setmainfont{Tinos}
-% \setmainfont{Georgia}
+\usepackage{titlesec}
 
-% \setmainfont{Open Sans}
-\setmainfont
-[Path=./fonts/Source_Sans_3/static/]
-{SourceSans3-Regular.ttf}[
-BoldFont =  SourceSans3-Bold.ttf,
-ItalicFont = SourceSans3-Italic.ttf ,
-BoldItalicFont = SourceSans3-BoldItalic.ttf ]
+\titleformat{\section}
+  {\normalfont\Large\bfseries} % format applied to whole title
+  {}                          % label
+  {0pt}                       % separation
+  {}                          % before-code
+  [\hrule]  % after-code
+
