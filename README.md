@@ -12,8 +12,14 @@ This is my personal resume written in `latex`. Latex is a
 
 See [https://notes.abgup.com/software/languages/latex/](https://notes.abgup.com/software/languages/latex/)
 
-```
+```bash
 $ latexmk -lualatex -pvc -view=pdf -outdir=build document.tex
+```
+
+Local Environment:
+
+```bash
+$ export TEXINPUTS=.:texmf:
 ```
 
 ## Package Manager
