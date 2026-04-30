@@ -11,6 +11,30 @@
 \usepackage{paracol}
 \setcolumnwidth{4.5cm}
 
+\newenvironment{skills}[4]
+{{ \color{myblue}
+  \begin{paracol}{4}
+    \begin{leftcolumn}
+      #1
+    \end{leftcolumn}
+    \begin{column}
+      #2
+    \end{column}
+    \begin{column}
+      #3
+    \end{column}
+    \begin{column}
+      #4
+    \end{column}
+  \end{paracol} }}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% TO DELETE
+
+\newenvironment{expcol}
+{ \begin{paracol}{2} } {
+  \end{paracol} }
+
 \newenvironment{skillscol}
 {
   \color{myblue} \vspace{0.5em} 
@@ -21,14 +45,12 @@
   \vspace{1em}
 }
 
-\newenvironment{skills}[2]
-{  \color{myblue} \vspace{0.5em} 
-            #1
-        #2
-         }{
+\newenvironment{skillcol}
+{
+  \color{myblue} \vspace{0.5em} 
+  \begin{paracol}{3}
+}
+{
+  \end{paracol}
   \vspace{1em}
 }
-
-\newenvironment{expcol}
-{ \begin{paracol}{2} } {
-  \end{paracol} }
