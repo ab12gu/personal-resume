@@ -12,14 +12,29 @@
   {\normalfont\Large\bfseries} % format applied to whole title
   {}                          % label
   {0pt}                       % separation
-  {\vspace{-0.5em}}                          % before-code
+  {}                          % before-code
   [\hrule]  % after-code
 
+% \titlespacing*{⟨command ⟩}{⟨left⟩}{⟨before-sep⟩}{⟨after-sep⟩}[⟨right-sep⟩]
+\titlespacing*{\section}
+  {0pt}
+  {0pt}
+  {0pt}
+  [0pt]
+
 \titleformat{\subsection}
-  {\normalfont\bfseries} % format applied to whole title
+  {\normalfont\bfseries\major} % format applied to whole title
   {}                          % label
   {0pt}                       % separation
-  {\vspace{-0.5em}}                          % before-codeA
-  []  % after-code
+  {}                          % before-code
+  []                          % after-code
 
-\newcommand{\subtitle}[3]{{\bfseries #1, }{\bfseries \color{mygreen}#2}\hfill #3}
+% \titlespacing*{⟨command ⟩}{⟨left⟩}{⟨before-sep⟩}{⟨after-sep⟩}[⟨right-sep⟩]
+\titlespacing*{\subsection}
+  {0pt}
+  {0pt}
+  {0pt}
+  [0pt]
+
+\newcommand{\subtitle}[3]{{\vspace{3pt}\bfseries #1, }{\bfseries \color{mygreen}#2}\hfill #3 \\}
+

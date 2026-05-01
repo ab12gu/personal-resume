@@ -2,9 +2,10 @@
 
 \usepackage{color}
 
-\definecolor{mygreen}{cmyk}{0.70,0.44,0.88,0}
 \definecolor{hyperlinks}{cmyk}{0.96,0.29,0,0.29}
 \definecolor{myblue}{cmyk}{0.96,0.59,0,0.29}
+\definecolor{mybrown}{rgb}{0.58, 0.25, 0.03}
+\definecolor{mygreen}{cmyk}{0.70,0.44,0.88,0}
 \definecolor{bluebell}{rgb}{0.64, 0.64, 0.82} % https://latexcolor.com/
 
 \usepackage{hyperref}
@@ -16,7 +17,9 @@
     urlcolor=hyperlinks,
     }
 
-\newenvironment{green}[1]{{\color{mygreen}\bfseries\itshape #1}}
+\newenvironment{minor}[1]{{\color{mygreen}\bfseries\itshape #1}}
 
-\newenvironment{blue}[1]{{\bfseries\color{myblue} #1}}
+\newenvironment{major}[1]{{\bfseries\color{mybrown} #1}}
+
+\newenvironment{hyp}[1]{{\bfseries\color{myblue} #1}}
 
