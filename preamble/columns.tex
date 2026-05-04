@@ -3,7 +3,7 @@
 \setlist[description]{noitemsep, labelsep=0pt, leftmargin=*, align=right}
 \setlist[description, 2]{leftmargin=0.25cm, topsep=0cm}
 
-\setlist[itemize]{noitemsep, labelsep=5pt, leftmargin=20pt, align=right, nosep, topsep=0pt}
+\setlist[itemize]{noitemsep, labelsep=5pt, leftmargin=20pt, align=right, nosep, topsep=0pt, label=\major\textbullet}
 
 \usepackage{multicol}
 \setlength{\multicolsep}{0em}
@@ -12,7 +12,7 @@
 \setcolumnwidth{4.5cm}
 
 \newenvironment{skills}[4]
-{{ \color{myblue}
+{{ \color{mybrown}
   \begin{paracol}{4}
     \begin{leftcolumn}
       #1
@@ -28,29 +28,3 @@
     \end{column}
   \end{paracol} }}
 
-%%%%%%%%%%%%%%%%%%%%%%
-%% TO DELETE
-
-\newenvironment{expcol}
-{ \begin{paracol}{2} } {
-  \end{paracol} }
-
-\newenvironment{skillscol}
-{
-  \color{myblue} \vspace{0.5em} 
-  \begin{paracol}{4}
-}
-{
-  \end{paracol}
-  \vspace{1em}
-}
-
-\newenvironment{skillcol}
-{
-  \color{myblue} \vspace{0.5em} 
-  \begin{paracol}{3}
-}
-{
-  \end{paracol}
-  \vspace{1em}
-}
